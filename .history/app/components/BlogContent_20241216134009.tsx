@@ -1,0 +1,23 @@
+"use client";
+
+import { BuilderContent } from "@builder.io/react";
+import { RenderBuilderContent } from "./builder";
+
+export default function BlogContent({ article }: { article: any }) {
+  console.log(article);
+  return (
+    <BuilderContent
+      content={article}
+      options={{ includeRefs: true }}
+      model="blog-article"
+    >
+      {(data, loading, fullContent) => (
+        <RenderBuilderContent
+          model="blog-article"
+          content={fullContent}
+          options={{ includeRefs: true }}
+        />
+      )}
+    </BuilderContent>
+  );
+}
