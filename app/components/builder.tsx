@@ -1,6 +1,6 @@
 "use client";
 import { ComponentProps } from "react";
-import { builder } from "@builder.io/sdk";
+import { builder } from "@builder.io/react";
 import { BuilderComponent, useIsPreviewing } from "@builder.io/react";
 
 // Replace with your Public API Key
